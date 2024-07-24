@@ -1,5 +1,5 @@
 # Markdown: What is it?
-Last Edited on 2024-07-24
+Last Edited by Ivan Brown on 2024-07-24
 
 ## Markdown is Composed of 2 Things
 - a language for creating web content using syntax in a text file that is much lighter than HTML tags
@@ -27,28 +27,15 @@ Each platform or conversion tool runs on a particular flavor of markdown. The [o
 
 ## A Few Interesting Examples (using GFM)
 
-### Ordered List
-An ordered list (a list in which sequence is important) can be made by simply starting lines with 1, 2, 3...
-1. Identify the flavor of Markdown supported by the platform.
-2. Write Markdown in that flavor.
-3. Convert Markdown to HTML.
+### Code Span (short inline code) 
+Highlight the code by beginning and ending text with **`**. 
 
-### Unordered List
-An unordered list (a list in which sequence isn't important) can be made by beginning lines with **-**.
-- bananas
-- peanut buter
-- apple sauce
-- tuna
-- corn flakes
+Example: `print("Hello World!");`
 
-##### Code Block
-Make a block of code look like a block of code by a hard return followed by lines that start with at least 4 spaces.
+### Fenced Code Block
+Illustrate code by beginning and ending text with **```** 
 
-    def get_count(the_data_object):
-        return arcpy.GetCount_management(the_data_object).getOutput(0)
-        
-##### Code Block - Another Way, Using Fenced Code Block
-Another way to present a block of code is fence the code with ==```==
+Example...
 ```
 def get_index(the_list, the_string):
    found_it = False
@@ -64,19 +51,86 @@ def get_index(the_list, the_string):
       return -1
 ```
 
-##### Hyperlink
-Text that is a URL can be immediately made into a hyperlink.
->For more information, go to <https://vcgi.vermont.gov>.
+### Header Levels
+Begin a line w/ a `#` for a top-level header. Then, for sub-headers and sub-sub-headers and so on, increase the number of `#`, i.e., `###`.
 
-Otherwise, text can be quickly hyperlinked with a ==[text to show] (URL)== pattern.
->[VCGI](https://vcgi.vermont.gov) is the Vermont Center for Geographic Information.
+### Bold (Emphasized Text)
+Wrap the text to be bold with `**`.
 
-##### Image
-An image is added with an ==![alternative text] (URL "Title")== pattern.
+Example: I want **this text** to be bold.
+
+### Italics
+Wrap the text to be in italics with `*`.
+
+Example: I want *this text* to be in italics.
+
+### Italics and Bold
+Wrap the text to be in italics and bold with `***`.
+
+Example: I want ***this text*** to be in italics and bold.
+
+### Strikethrough
+Wrap the text to be in strikethrough with `~~`.
+
+Supported data formats include file geodatabase, ~~shapefile~~, and GeoPackage.
+
+### Hard Return  
+To force a hard return, end line of text with 2 or more spaces followed by return.
+
+Example:  Here's a line of text followed by 2 spaces.  
+And here's another line.
+
+### Thematic Break Line 
+`---` Makes a thematic break line.
+
+Example: 
+
+---
+
+### Paragraphs 
+Use a blank line to separate paragraphs.
+
+Paragraph 1
+
+Paragraph 2
+
+### Ordered List
+An ordered list (a list in which sequence is important) can be made by simply starting lines with 1, 2, 3...
+
+Example...
+1. Identify the flavor of Markdown supported by the platform.
+2. Write Markdown in that flavor.
+3. Convert Markdown to HTML.
+
+### Unordered List
+An unordered list (a list in which sequence isn't important) can be made by beginning lines with `-`.
+
+Example...
+- bananas
+- peanut buter
+- apple sauce
+- tuna
+- corn flakes
+
+### Hyperlink
+Text that is a URL can be immediately made into a hyperlink. 
+
+Example: For more information, go to https://vcgi.vermont.gov.
+
+Otherwise, text can be quickly hyperlinked with a `[text to show] (URL)` pattern. 
+
+Example: [VCGI](https://vcgi.vermont.gov) is the Vermont Center for Geographic Information.
+
+### Image
+An image is added with an `![alternative text](URL "Title")` pattern. 
+
+Example...  
 ![tractor picture](http://maps.vcgi.vermont.gov/opendata/images/icons/data_themes/Agriculture-Icon.svg "tractor")
 
-##### Table
-Use a combination of ==- - -== and ==|== to make a table.
+### Table
+Use a combination of `---` and `|` to make a table.  
+
+Example... 
 | Version           | Release Date     |
 | ---               | ---              |
 | 1.0               | 2012-04-30       |
@@ -84,10 +138,12 @@ Use a combination of ==- - -== and ==|== to make a table.
 | 1.2               | 2015-07-08       |
 | 2.0               | 2017-09-09       |
 
-##### Footnote
-A footnote is a hyperlinked superscript number that links to an anchor somewhere on the page. To make the superscipt part, use a ==[^footnote identifier]== pattern. To make the anchor, use a ==[^footnote identifier]: info== pattern. Regardless of the identifiers that are used, footnotes are number sequentially, starting with 1.
->Use the REST[^2] protocol.
->[^2]: Representational State Transfer protocol.
+### Footnote
+A footnote is a hyperlinked superscript number that links to an anchor somewhere on the page. To make the superscipt part, use a `[^footnote identifier]` pattern. To make the anchor, use a `[^footnote identifier]: info` pattern. Regardless of the identifiers that are used, footnotes are number sequentially, starting with 1.  
+
+Example...  
+Use the REST[^2] protocol.  
+[^2]: Representational State Transfer protocol.
 
 ##### Definition List
 A definition list can be quickly created by entering a term followed by lines that begin with ==:==. Notice that the terms can be made bold by using ==**== (Markdown syntax).
