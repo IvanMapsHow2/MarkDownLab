@@ -1,8 +1,6 @@
 # Markdown: What is it?
 Last Edited on 2024-07-24
 
----
-
 ## Markdown is Composed of 2 Things
 - a language for creating web content using syntax in a text file that is much lighter than HTML tags
     (has an original basic syntax and several spin-off flavors)
@@ -27,28 +25,16 @@ Each platform or conversion tool runs on a particular flavor of markdown. The [o
 
 [CommonMark](https://spec.commonmark.org/0.29/) is a specification that attempts to more clearly specify Markdown syntax. [GFM](https://github.github.com/gfm/) (GitHub Flavored Markdown)--a markdown flavor used in GitHub--is a superset of the CommonMark specification. Another CommonMark-superset flavor is Markdown used by the [Dillinger](https://dillinger.io) open-source web-based markdown editor. Dillinger runs on a converter called [markdown-it](https://github.com/markdown-it/markdown-it), which runs on a CommonMark superset (a couple of syntax extensions are from GFM).
 
-## A Few Interesting Examples (using Dillinger)
-### Abbreviation
-Abbreviation shows tips that elaborate when user hovers over given text (every time that text occurs in document).
+## A Few Interesting Examples (using GFM)
 
-\*[lidar]: Light Detection and Ranging
-*[lidar]: Light Detection and Ranging
->The dataset is derived from lidar.
-
-### Highlighting
-Highlighting simply highlights text like a highlighter.
-
-\==what I want to highlight\==
->Whatever you do, ==don't use a development server for production use.==
-
-##### Ordered List
+### Ordered List
 An ordered list (a list in which sequence is important) can be made by simply starting lines with 1, 2, 3...
 1. Identify the flavor of Markdown supported by the platform.
 2. Write Markdown in that flavor.
 3. Convert Markdown to HTML.
 
-##### Unordered List
-An unordered list (a list in which sequence isn't important) can be made by beginning lines with ==-==, ==*==, or ==+==.
+### Unordered List
+An unordered list (a list in which sequence isn't important) can be made by beginning lines with **-**.
 - bananas
 - peanut buter
 - apple sauce
