@@ -103,7 +103,7 @@ Example...
 3. Convert Markdown to HTML.
 
 ### Unordered List
-An unordered list (a list in which sequence isn't important) can be made by beginning lines with `-`.
+An unordered list (a list in which sequence isn't important) can be made by beginning lines with `- `.
 
 Example...
 - bananas
@@ -111,6 +111,31 @@ Example...
 - apple sauce
 - tuna
 - corn flakes
+
+### Nested Ordered/Unordered Lists  
+Nesting is possible in ordered and unordered lists by aligning the number or bullet below where the parent content begins. 
+
+For example...
+
+```
+1. Get these ingredients together:
+   - a clove of garlic
+     - organic is preferred
+     - minced
+   - 1 tablespoon of lemon juice
+   - 1/4 teaspoon of black pepper
+2. Mix the ingredients in a bowl
+   a. Mix in bowl until well-blended
+   b. Put bowl to side
+```
+Renders as...  
+1. Get these ingredients together:
+   - a clove of garlic
+     - organic is preferred
+     - minced
+   - 1 tablespoon of lemon juice
+   - 1/4 teaspoon of black pepper
+2. Mix the ingredients in a bowl
 
 ### Task List
 Make a list of un-checked and/or checked tasks with the pattern `- [ ] Task Description` or `- [x] Task Description`.  
@@ -163,6 +188,34 @@ For a multi-paragraph blockquote, add a `>` followed by a return between paragra
 >All geodatabases that exchange data via the **EGC Geospatial Data Exchange Protocol** must be in a geodatabase release that is supported by Esri for both **ArcGIS Desktop** and **ArcGIS Pro**-–this means that currently, data exchanged via the protocol must be in a geodatabase release of **10.3.1** or higher.
 >
 >Currently, hub geodatabases are in geodatabase release **10.5.1**. They are located in an instance of **Microsoft SQL Server 2016 (64-bit)**; a SQL Server client of **2012** or higher is required for connecting.
+
+### Emojis
+Choose an emoji from the [GitHub emoji code list](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md) and wrap it with `:`.  
+
+For example, :grinning:.
+
+### Alerts
+Start with `>`, add a type of alert in `[ ]` (i.e., `[!NOTE]`), and then enter the message on a new line that begins with `>` as a continuation of the blockquote.  
+
+The NOTE alert...  
+> [!NOTE]
+> Just to make note...
+
+The TIP alert...  
+> [!TIP]
+> A tip.
+
+The IMPORTANT alert...  
+> [!IMPORTANT]
+> Make sure you do this.  
+
+The WARNING alert...  
+> [!WARNING]
+> Something's missing from what you entered.
+
+The CAUTION alert...  
+> [!CAUTION]
+> Hazard! 
 
 ### Getting Help with Markdown
 [A Guide on GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).  
